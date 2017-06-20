@@ -185,6 +185,17 @@
         <elementDefinition Id="8c1a5908-37e3-44c8-a886-04dace3851f0" />
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ea521ef3-24f6-40a1-b33f-f55af1145212" name="Pause" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5f3f2116-3b73-47f4-8346-d5eea8ea0e81" />
+        <extendedCases>
+          <extend Id="fe00cc72-9635-473c-8e07-b6df452fff81">
+            <useCaseMoniker Id="ff9c0082-0d93-4c65-969c-df9078867398" LastKnownName="Play game" />
+            <elementDefinition Id="9c49a9d0-15fb-4fb0-9036-32dc8bf56c7d" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="a248f3c9-a825-441e-9592-1af55542e4c7" name="Sea_battle">
     <elementDefinition Id="351e6d23-54aa-4e32-b8c9-f25ae30541e0" />

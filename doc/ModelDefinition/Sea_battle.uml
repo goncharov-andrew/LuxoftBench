@@ -5558,6 +5558,23 @@
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5f3f2116-3b73-47f4-8346-d5eea8ea0e81"
+        name="Pause"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="9c49a9d0-15fb-4fb0-9036-32dc8bf56c7d">
+            <useCaseMoniker
+              Id="0f6a0594-590a-4b58-ac13-ea1a6344469d"
+              LastKnownName="Play game"
+              LastKnownLocation="Sea_battle.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
