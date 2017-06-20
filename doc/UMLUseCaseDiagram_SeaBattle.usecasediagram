@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="648b49a7-f4a9-4262-bf82-f735a0edd527" name="UMLUseCaseDiagram_SeaBattle" linkedPackageId="a248f3c9-a825-441e-9592-1af55542e4c7" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="f16c9ae3-4932-4ec7-8324-f3dd48cf423a">
+      <profileInstance Id="c78a3f4a-38c3-44fe-a4cf-d834f4e9d139" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="385cbd86-0b35-46cc-9691-b4badc818740">
+      <profileInstance Id="ee532d41-e0b8-4bc9-a04b-8804dd77ef17" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="7c758e1e-5a0f-4499-999c-f5aabea8cb05" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9c5b23ac-9bca-4f02-baf0-d3b2f80b18d0" />
+        <targetEnds>
+          <association Id="6e594646-e89b-4c8e-9026-da95787d444c" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Start the Game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e2ad1c67-c4a4-4b2a-a5cf-c90f53738fb3" LastKnownName="Start the game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aea4be8d-d612-44d4-b058-1c6c78ed3d59" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3cff6583-bbe4-40e1-9507-c907d08253ea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5f07b97-572c-4f2d-af52-3588dc5617df" name="Start the Game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0ee4396c-f81c-4814-bd70-13405064d6c4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c74f1d73-a755-4fdf-8e46-efbb63a9f973" />
+          </association>
+          <association Id="12f049b5-2df9-41e3-ba10-0b4855e0fcfc" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Play Game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ff9c0082-0d93-4c65-969c-df9078867398" LastKnownName="Play game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="696d9bb6-2c78-412a-b3f0-ee9991e45363" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5142e944-9530-4d1b-99e1-928cd2f97ed6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="57d6af82-a8e4-4e97-828c-8b5878826352" name="Play Game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1bc5579a-44f7-47b8-9c19-d5567461b1cb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f1390a49-a01c-41a3-b5a2-f897c4a5e67b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e2ad1c67-c4a4-4b2a-a5cf-c90f53738fb3" name="Start the game" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ac716071-4bb2-426f-95c4-c81ef3b7ccd1" />
+        <additions>
+          <include Id="623ef615-47bc-4206-98cf-7d5d91700816">
+            <useCaseMoniker Id="dcc4431c-6de8-4f41-ab75-219d6d659a95" LastKnownName="Init navies" />
+            <elementDefinition Id="18b034dc-2784-4a3b-92ab-3fe49ed3afbd" />
+          </include>
+          <include Id="8d0b65a0-2452-448a-8803-cdc4e51d0d30">
+            <useCaseMoniker Id="68e4e604-4152-4a6d-b303-2fbcbf7a47fa" LastKnownName="Init maps" />
+            <elementDefinition Id="85456efc-d20c-418e-94c5-0cca61781bf2" />
+          </include>
+          <include Id="5d48204b-30c8-4ecc-a27e-c7eb2565b55c">
+            <useCaseMoniker Id="eaa52bc9-6301-4272-89b1-f95c13c1c8a8" LastKnownName="Init players" />
+            <elementDefinition Id="e7b0f8f7-d699-40cd-800c-0d8bb37751cc" />
+          </include>
+          <include Id="5a35d5ec-7eba-42db-bcc2-36b645a57ca7">
+            <useCaseMoniker Id="4776178c-72ba-493d-93b4-2a9690dfa10d" LastKnownName="Init timer" />
+            <elementDefinition Id="b35598bf-2e18-4c3f-926c-3f4d4410552b" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dcc4431c-6de8-4f41-ab75-219d6d659a95" name="Init navies" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cdc8ed79-1fdb-4185-8f09-bf2d7b0fdaee" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="68e4e604-4152-4a6d-b303-2fbcbf7a47fa" name="Init maps" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bfaef2db-e57b-49a8-b272-99d408eeb151" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eaa52bc9-6301-4272-89b1-f95c13c1c8a8" name="Init players" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="387fd483-20b3-4464-941b-28094a13ce90" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f8a5c221-4ca8-4128-ab91-78600b56c272" name="Make a shoot" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="44649158-e764-4d7b-8e18-4a827f67d0f3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4776178c-72ba-493d-93b4-2a9690dfa10d" name="Init timer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="25aa2daa-f50c-4a5c-902f-39c48639902c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6597484e-b8ae-4ffb-9180-d0a17319cb2f" name="Fault" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bd408f5e-3ae1-4764-b7df-b02c270715da" />
+        <extendedCases>
+          <extend Id="cd8df08c-93da-4761-b672-3a1295cb9d51">
+            <useCaseMoniker Id="f8a5c221-4ca8-4128-ab91-78600b56c272" LastKnownName="Make a shoot" />
+            <elementDefinition Id="8c6e54a3-54b7-4244-95b1-b1db3bab73c8" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="09aed026-efc7-4d80-8ec2-5baf70ebb4ea" name="Hit" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fd8c5c83-fbdd-44d1-84e4-8a69acb27caf" />
+        <extendedCases>
+          <extend Id="2da023f4-5ad0-4c1d-8a81-cfefd07aaf25">
+            <useCaseMoniker Id="f8a5c221-4ca8-4128-ab91-78600b56c272" LastKnownName="Make a shoot" />
+            <elementDefinition Id="d139b1fb-71a8-4bbe-b6aa-987bd0dae74a" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ff9c0082-0d93-4c65-969c-df9078867398" name="Play game" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0f6a0594-590a-4b58-ac13-ea1a6344469d" />
+        <additions>
+          <include Id="24c94fa8-b4e0-44c5-95ec-4fa3d22c7bd1">
+            <useCaseMoniker Id="f8a5c221-4ca8-4128-ab91-78600b56c272" LastKnownName="Make a shoot" />
+            <elementDefinition Id="52c74084-c490-4133-9699-518a1762db06" />
+          </include>
+          <include Id="b9ec6ed0-2292-4d2f-a066-1ec8d7f13f28">
+            <useCaseMoniker Id="bfcb31cb-fd7f-497d-aef3-d34808b19d85" LastKnownName="Draw maps" />
+            <elementDefinition Id="0bdc2d51-ae93-4283-9eec-1b517382e238" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bfcb31cb-fd7f-497d-aef3-d34808b19d85" name="Draw maps" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="05838906-5792-47ff-885e-117fe89de123" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="a248f3c9-a825-441e-9592-1af55542e4c7" name="Sea_battle">
+    <elementDefinition Id="351e6d23-54aa-4e32-b8c9-f25ae30541e0" />
+  </package>
+</useCaseModelRoot>
