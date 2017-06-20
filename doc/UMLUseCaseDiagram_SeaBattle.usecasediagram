@@ -51,6 +51,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="f1390a49-a01c-41a3-b5a2-f897c4a5e67b" />
           </association>
+          <association Id="0179502f-7710-47e2-81c6-f064b30c9f4b" isDerived="false" sourceEndRoleName="User" targetEndRoleName="End game" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="44d9da02-1d93-4a91-b187-711e1e73ddf9" LastKnownName="End game" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2669fca3-850f-45e6-8d12-9027b6e2f416" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="18b52c3e-6cf5-46bd-b73a-346c6187e113" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="061e69e4-caf4-4c6d-8058-198d5ddab248" name="End game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9d13262b-1265-4946-b48e-4550f68ec3cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a9557c2a-70c8-40c0-93d6-fb4fcacfe409" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -142,6 +158,31 @@
     <useCaseModelRootHasTypes>
       <useCase Id="bfcb31cb-fd7f-497d-aef3-d34808b19d85" name="Draw maps" isAbstract="false" isLeaf="false">
         <elementDefinition Id="05838906-5792-47ff-885e-117fe89de123" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="44d9da02-1d93-4a91-b187-711e1e73ddf9" name="End game" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58a55a03-a110-4ed6-ad92-45a9b8703056" />
+        <additions>
+          <include Id="f81ba6df-a661-40a9-9b61-6cf2ccbea9f7">
+            <useCaseMoniker Id="fd60e374-aa86-4621-b552-d98622cd83e8" LastKnownName="Stop timer" />
+            <elementDefinition Id="215d3c2a-bdb1-430e-84ea-9b62351a59c2" />
+          </include>
+          <include Id="ae0da4fa-8a21-427e-98b0-821a8d756662">
+            <useCaseMoniker Id="7f530519-7173-460b-b820-6cb9ccd3976d" LastKnownName="Show statistics" />
+            <elementDefinition Id="15121388-7c27-4769-afe1-98324259cfc7" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fd60e374-aa86-4621-b552-d98622cd83e8" name="Stop timer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="15214801-ed2b-4517-a9de-e5b156670253" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7f530519-7173-460b-b820-6cb9ccd3976d" name="Show statistics" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8c1a5908-37e3-44c8-a886-04dace3851f0" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>

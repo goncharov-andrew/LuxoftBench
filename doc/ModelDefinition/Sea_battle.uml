@@ -5340,6 +5340,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="a9557c2a-70c8-40c0-93d6-fb4fcacfe409"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="End game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="58a55a03-a110-4ed6-ad92-45a9b8703056"
+              LastKnownName="End game"
+              LastKnownLocation="Sea_battle.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="18b52c3e-6cf5-46bd-b73a-346c6187e113"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d13262b-1265-4946-b48e-4550f68ec3cd"
+                  name="End game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -5478,6 +5517,44 @@
       <useCase
         Id="05838906-5792-47ff-885e-117fe89de123"
         name="Draw maps"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="58a55a03-a110-4ed6-ad92-45a9b8703056"
+        name="End game"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="215d3c2a-bdb1-430e-84ea-9b62351a59c2">
+            <useCaseMoniker
+              Id="15214801-ed2b-4517-a9de-e5b156670253"
+              LastKnownName="Stop timer"
+              LastKnownLocation="Sea_battle.uml" />
+          </include>
+          <include
+            Id="15121388-7c27-4769-afe1-98324259cfc7">
+            <useCaseMoniker
+              Id="8c1a5908-37e3-44c8-a886-04dace3851f0"
+              LastKnownName="Show statistics"
+              LastKnownLocation="Sea_battle.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="15214801-ed2b-4517-a9de-e5b156670253"
+        name="Stop timer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8c1a5908-37e3-44c8-a886-04dace3851f0"
+        name="Show statistics"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
