@@ -1,0 +1,32 @@
+#ifndef GAME_H
+#define GAME_H
+
+#include <playercreator.h>
+#include <time.h>
+
+
+class Game
+{
+private:
+
+    clock_t timeBegin_;
+
+    clock_t timeEnd_;
+
+    Player* enemy_;
+
+    Player* human_;
+
+    PlayerCreator* playerCreator_;
+
+    void showMaps();
+
+    void showStatistics();
+
+public:
+    Game();
+
+    void startGame();
+};
+
+#endif // GAME_H
