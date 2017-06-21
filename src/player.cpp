@@ -23,25 +23,32 @@ int Player::getNumberOfDeadShips()
 
 int Player::setEnemyShoot(int x, int y)
 {
-    return -1;
+    return playerMap_.checkField(x, y);
 }
 
 void Player::setResultOfOwnShoot(int x, int y, bool result)
 {
-
+    if(result == true)
+    {
+        enemyMap_.setPipeShoot(x, y);
+    }
+    else
+    {
+        enemyMap_.setEmptyShoot(x, y);
+    }
 }
 
-std::pair<int, int> Player::getSootingCoordinates()
+std::pair<int, int> Player::getShootingCoordinates()
 {
     return getCoordinatesStrategy_->GetCoordinates();
 }
 
 Map& Player::getEnemyMap()
 {
-    return playerMap_;
+    return enemyMap_;
 }
 
 Map& Player::getPlayerMap()
 {
-    return enemyMap_;
+    return playerMap_;
 }

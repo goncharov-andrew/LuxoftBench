@@ -75,6 +75,31 @@ void Map::setEmptyShoot(int x, int y)
     map_[x][y] = mapsymbols_.BLASTED_EMPTY;
 }
 
+char** Map::getMap()
+{
+    return map_;
+}
+
+int Map::checkField(int x, int y)
+{
+    if(map_[x][y] == mapsymbols_.PIPE)
+    {
+        map_[x][y] = mapsymbols_.BLASTED_PIPE;
+
+        return 1;
+    }
+    else if(map_[x][y] == mapsymbols_.EMPTY)
+    {
+        map_[x][y] = mapsymbols_.BLASTED_EMPTY;
+
+        return 0;
+    }
+    else
+    {
+        return -1;
+    }
+}
+
 Map& Map::operator=(const Map& right)
 {
      if (this == &right)
@@ -99,3 +124,4 @@ Map& Map::operator=(const Map& right)
 
      return *this;
 }
+

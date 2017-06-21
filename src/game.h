@@ -28,7 +28,7 @@ private:
 
     PlayerCreator* playerCreator_;
 
-    void showMaps();
+    void showMaps(Player* player);
 
     void showStatistics();
 };

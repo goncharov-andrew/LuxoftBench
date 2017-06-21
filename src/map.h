@@ -20,9 +20,9 @@ public:
 
     void setEmptyShoot(int x, int y);
 
-    char getField(int x, int y);
+    int checkField(int x, int y);
 
-    const char** getMap();
+    char **getMap();
 
 private:
 

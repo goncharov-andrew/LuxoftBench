@@ -27,7 +27,7 @@ public:
 
     Map& getPlayerMap();
 
-    std::pair<int, int> getSootingCoordinates();
+    std::pair<int, int> getShootingCoordinates();
 
 private:
 
