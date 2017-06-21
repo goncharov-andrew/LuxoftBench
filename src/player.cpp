@@ -1,24 +1,24 @@
 #include "player.h"
 
-Player::Player(Map* playerMap, Map* enemyMap, Navy* navy, GetCoordinatesStrategy* getCoordinatesStrategy)
+Player::Player(Map& playerMap, Map& enemyMap, Navy& navy, GetCoordinatesStrategy* getCoordinatesStrategy)
 {
     playerMap_ = playerMap;
+
+    enemyMap_ = enemyMap;
 
     navy_ = navy;
 
     getCoordinatesStrategy_ = getCoordinatesStrategy;
-
-    enemyMap_ = enemyMap;
 }
 
 int Player::getNumberOfAliveShips()
 {
-    return -1;
+    return navy_.getNumberOfAliveShips();
 }
 
 int Player::getNumberOfDeadShips()
 {
-    return -1;
+    return navy_.getNumberOfDeadShips();
 }
 
 int Player::setEnemyShoot(int x, int y)
@@ -36,12 +36,12 @@ std::pair<int, int> Player::getSootingCoordinates()
     return getCoordinatesStrategy_->GetCoordinates();
 }
 
-Map* Player::getEnemyMap()
+Map& Player::getEnemyMap()
 {
     return playerMap_;
 }
 
-Map* Player::getPlayerMap()
+Map& Player::getPlayerMap()
 {
     return enemyMap_;
 }

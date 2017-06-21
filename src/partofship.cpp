@@ -8,12 +8,12 @@ PartOfShip::PartOfShip()
     coordinates_.second = -1;
 }
 
-std::pair <int, int> PartOfShip::getCoordinates()
+const std::pair<int, int>& PartOfShip::getCoordinates()
 {
     return coordinates_;
 }
 
-void PartOfShip::setCoordinates(std::pair<int, int> coordinates)
+void PartOfShip::setCoordinates(const std::pair<int, int> coordinates)
 {
     coordinates_ = coordinates;
 }

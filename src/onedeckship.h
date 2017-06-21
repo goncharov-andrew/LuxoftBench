@@ -1,7 +1,9 @@
 #ifndef ONEDECKSHIP_H
 #define ONEDECKSHIP_H
 
-#include "ship.h"
+#include <constants.h>
+
+#include <ship.h>
 
 class OneDeckShip : public Ship
 {
@@ -12,7 +14,7 @@ public:
 
     bool getIsAlive();
 
-    bool setCoordinates(std::stack<std::pair<int, int>> coordinates);
+    bool setCoordinates(std::stack<std::pair<int, int>>& coordinates);
 
     std::vector<std::pair<int, int>> getCoordinates();
 };

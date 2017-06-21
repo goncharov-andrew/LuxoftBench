@@ -2,8 +2,11 @@
 #define GAME_H
 
 #include <playercreator.h>
+#include <humancreator.h>
+#include <enemycreator.h>
 
 #include <time.h>
+#include <iostream>
 
 
 class Game
@@ -28,8 +31,6 @@ private:
     void showMaps();
 
     void showStatistics();
-
-
 };
 
 #endif // GAME_H

@@ -9,9 +9,9 @@ class PartOfShip
 public:
     PartOfShip();
 
-    std::pair<int, int> getCoordinates();
+    const std::pair<int, int>& getCoordinates();
 
-    void setCoordinates(std::pair<int, int> coordinates);
+    void setCoordinates(const std::pair<int, int> coordinates);
 
     bool getIsAlive();
 

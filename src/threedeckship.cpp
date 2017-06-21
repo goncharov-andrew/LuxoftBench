@@ -2,11 +2,13 @@
 
 ThreeDeckShip::ThreeDeckShip()
 {
-    size_ = 3;
+    size_ = THREE_DECK_SHIP_SIZE;
 
-    parts_.push_back(new PartOfShip);
-    parts_.push_back(new PartOfShip);
-    parts_.push_back(new PartOfShip);
+    PartOfShip partOfShip;
+
+    parts_.push_back(partOfShip);
+    parts_.push_back(partOfShip);
+    parts_.push_back(partOfShip);
 
 }
 
@@ -20,12 +22,12 @@ bool ThreeDeckShip::getIsAlive()
     return Ship::getIsAlive();
 }
 
-bool ThreeDeckShip::setCoordinates(std::stack<std::pair<int, int> > coordinates)
+bool ThreeDeckShip::setCoordinates(std::stack<std::pair<int, int> >& coordinates)
 {
     return Ship::setCoordinates(coordinates);
 }
 
-std::vector<std::pair<int, int>> ThreeDeckShip::getCoordinates()
+std::vector<std::pair<int, int> > ThreeDeckShip::getCoordinates()
 {
     return Ship::getCoordinates();
 }

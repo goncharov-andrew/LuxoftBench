@@ -3,19 +3,15 @@
 #include <humancreator.h>
 #include <enemycreator.h>
 
+#include <game.h>
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    PlayerCreator* humanPlayerCreator = new HumanCreator();
+    Game game;
 
-    PlayerCreator* enemyPlayerCreator = new EnemyCreator();
-
-    Player* humanPlayer = humanPlayerCreator->createPlayer();
-
-    Player* enemyPlayer = enemyPlayerCreator->createPlayer();
-
-    int c = 10;
+    game.startGame();
 
     return a.exec();
 }

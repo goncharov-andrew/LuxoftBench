@@ -2,12 +2,14 @@
 
 FourDeckShip::FourDeckShip()
 {
-    size_ = 4;
+    size_ = FOUR_DECK_SHIP_SIZE;
 
-    parts_.push_back(new PartOfShip);
-    parts_.push_back(new PartOfShip);
-    parts_.push_back(new PartOfShip);
-    parts_.push_back(new PartOfShip);
+    PartOfShip partOfShip;
+
+    parts_.push_back(partOfShip);
+    parts_.push_back(partOfShip);
+    parts_.push_back(partOfShip);
+    parts_.push_back(partOfShip);
 }
 
 FourDeckShip::~FourDeckShip()
@@ -20,12 +22,12 @@ bool FourDeckShip::getIsAlive()
     return Ship::getIsAlive();
 }
 
-bool FourDeckShip::setCoordinates(std::stack<std::pair<int, int> > coordinates)
+bool FourDeckShip::setCoordinates(std::stack<std::pair<int, int> >& coordinates)
 {
     return Ship::setCoordinates(coordinates);
 }
 
-std::vector<std::pair<int, int>> FourDeckShip::getCoordinates()
+std::vector<std::pair<int, int> > FourDeckShip::getCoordinates()
 {
     return Ship::getCoordinates();
 }

@@ -7,13 +7,13 @@ EnemyCreator::EnemyCreator()
 
 Player* EnemyCreator::createPlayer()
 {
-    NavyBuilder* navyBuilder = new NavyBuilder();
+    NavyBuilder navyBuilder;
 
-    Navy* navy = navyBuilder->buildNavy();
+    Navy navy = navyBuilder.buildNavy();
 
-    Map* playerMap = new Map(navy);
+    Map playerMap(navy);
 
-    Map* enemyMap = new Map();
+    Map enemyMap;
 
     GetCoordinatesStrategy* playerCoordinateStrategy = new GetEnemyCoordinatesStrategy();
 

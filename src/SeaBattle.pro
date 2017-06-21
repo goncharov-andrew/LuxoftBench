@@ -58,4 +58,5 @@ HEADERS += \
     createcoordinates.h \
     humancreator.h \
     enemycreator.h \
-    playercreator.h
+    playercreator.h \
+    constants.h

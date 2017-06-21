@@ -13,7 +13,7 @@
 class Player
 {
 public:
-    Player(Map* playerMap, Map* enemyMap, Navy* navy, GetCoordinatesStrategy* getCoordinatesStrategy);
+    Player(Map& playerMap, Map& enemyMap, Navy& navy, GetCoordinatesStrategy* getCoordinatesStrategy);
 
     int getNumberOfAliveShips();
 
@@ -23,19 +23,19 @@ public:
 
     void setResultOfOwnShoot(int x, int y, bool result);
 
-    Map* getEnemyMap();
+    Map& getEnemyMap();
 
-    Map* getPlayerMap();
+    Map& getPlayerMap();
 
     std::pair<int, int> getSootingCoordinates();
 
 private:
 
-    Map* enemyMap_;
+    Map enemyMap_;
 
-    Map* playerMap_;
+    Map playerMap_;
 
-    Navy* navy_;
+    Navy navy_;
 
     GetCoordinatesStrategy* getCoordinatesStrategy_;
 };

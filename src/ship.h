@@ -11,17 +11,17 @@ class Ship
 {
 public:
 
-    virtual ~Ship() = 0;
+    virtual ~Ship();
 
     virtual bool getIsAlive() = 0;
 
-    virtual bool setCoordinates(std::stack<std::pair<int, int>> coordinates) = 0;
+    virtual bool setCoordinates(std::stack<std::pair<int, int> > &coordinates) = 0;
 
-    virtual std::vector<std::pair<int, int>> getCoordinates() = 0;
+    virtual std::vector<std::pair<int, int> > getCoordinates() = 0;
 
 protected:
 
-   std::vector<PartOfShip*> parts_;
+   std::vector<PartOfShip> parts_;
 
    int size_;
 };

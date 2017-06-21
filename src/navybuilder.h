@@ -10,19 +10,19 @@ public:
 
     NavyBuilder();
 
-    Navy* buildNavy();
+    Navy buildNavy();
 
 private:
 
-    std::vector<OneDeckShip*> buildOneDeckShips();
+    std::vector<OneDeckShip> buildOneDeckShips();
 
-    std::vector<TwoDeckShip*> buildTwoDeckShips();
+    std::vector<TwoDeckShip> buildTwoDeckShips();
 
-    std::vector<ThreeDeckShip*> buildThreeDeckShips();
+    std::vector<ThreeDeckShip> buildThreeDeckShips();
 
-    std::vector<FourDeckShip*> buildFourDeckShips();
+    std::vector<FourDeckShip> buildFourDeckShips();
 
-    CreateCoordinates* createCoordinates;
+    CreateCoordinates createCoordinates;
 };
 
 #endif // NAVYBUILDER_H

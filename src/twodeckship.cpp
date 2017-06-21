@@ -2,10 +2,12 @@
 
 TwoDeckShip::TwoDeckShip()
 {
-    size_ = 2;
+    size_ = TWO_DECK_SHIP_SIZE;
 
-    parts_.push_back(new PartOfShip);
-    parts_.push_back(new PartOfShip);
+    PartOfShip partOfShip;
+
+    parts_.push_back(partOfShip);
+    parts_.push_back(partOfShip);
 
 }
 
@@ -19,12 +21,12 @@ bool TwoDeckShip::getIsAlive()
     return Ship::getIsAlive();
 }
 
-bool TwoDeckShip::setCoordinates(std::stack<std::pair<int, int> > coordinates)
+bool TwoDeckShip::setCoordinates(std::stack<std::pair<int, int> >& coordinates)
 {
     return Ship::setCoordinates(coordinates);
 }
 
-std::vector<std::pair<int, int>> TwoDeckShip::getCoordinates()
+std::vector<std::pair<int, int> > TwoDeckShip::getCoordinates()
 {
     return Ship::getCoordinates();
 }
