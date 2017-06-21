@@ -23,7 +23,14 @@ int Player::getNumberOfDeadShips()
 
 int Player::setEnemyShoot(int x, int y)
 {
-    return playerMap_.checkField(x, y);
+    int resultOfEnemyShoot = playerMap_.checkField(x, y);
+
+    if(resultOfEnemyShoot == 1)
+    {
+        navy_.setShootToPipe(x, y);
+    }
+
+    return resultOfEnemyShoot;
 }
 
 void Player::setResultOfOwnShoot(int x, int y, bool result)

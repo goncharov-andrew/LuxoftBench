@@ -17,6 +17,8 @@ public:
 
     bool setCoordinates(std::stack<std::pair<int, int>>& coordinates);
 
+    void setDeadPart(int x, int y);
+
     std::vector<std::pair<int, int>> getCoordinates();
 };
 

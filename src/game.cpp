@@ -47,8 +47,6 @@ void Game::showStatistics()
 
     int numberOfDeadEnemyShips = enemy_->getNumberOfDeadShips();
 
-
-
     std::cout << "STATISTICS: " << std::endl << std::endl;
 
     std::cout << "Game time: " << durationOfGame << std::endl << std::endl;
@@ -58,98 +56,119 @@ void Game::showStatistics()
     std::cout << "Number of killed ships: " << numberOfDeadEnemyShips << std::endl << std::endl;
 }
 
+void Game::showMessage(int code)
+{
+    if(code == 1)
+    {
+        std::cout << "HIT" << std::endl;
+    }
+    else if(code == 0)
+    {
+        std::cout << "FAIL" << std::endl;
+    }
+    else if(code == -1)
+    {
+
+    }
+}
+
+void Game::showResult(bool result)
+{
+    if(result == true)
+    {
+        std::cout << "You win!" << std::endl;
+    }
+    else
+    {
+        std::cout << "You lose!" << std::endl;
+    }
+}
+
 void Game::startGame()
 {
     std::pair<int, int> shootingCoordinates;
 
-    int resultOfShoot = -1;
+    bool isHumanStep = true;
+
+    bool isHumanWin = true;
+
+    int resultOfHumanShoot = -1;
+
+    int resultOfEnemyShoot = -1;
 
     system ("cls");
 
     timeBegin_ = std::clock();
 
-
     while(true)
     {
-        while(true)
+        if(isHumanStep == true)
         {
-            if(resultOfShoot == 1)
-            {
-                human_->setResultOfOwnShoot(shootingCoordinates.first, shootingCoordinates.second, true);
+            showMaps(human_);
 
-                showMaps(human_);
-
-                std::cout << "HIT" << std::endl;
-
-
-            }
-            else if(resultOfShoot == 0)
-            {
-                human_->setResultOfOwnShoot(shootingCoordinates.first, shootingCoordinates.second, false);
-
-                showMaps(human_);
-
-                std::cout << "FAIL" << std::endl;
-
-                break;
-            }
-            else if(resultOfShoot == -1)
-            {
-                showMaps(human_);
-            }
+            showMessage(resultOfHumanShoot);
 
             shootingCoordinates = human_->getShootingCoordinates();
 
-            resultOfShoot = enemy_->setEnemyShoot(shootingCoordinates.first, shootingCoordinates.second);
+            resultOfHumanShoot = enemy_->setEnemyShoot(shootingCoordinates.first, shootingCoordinates.second);
 
-            system ("cls");
-        }
-
-        resultOfShoot = -1;
-
-        if(enemy_->getNumberOfDeadShips() == 10)
-        {
-            std::cout << "You win!" << std::endl;
-
-            break;
-        }
-
-        while(true)
-        {
-            showMaps(enemy_);
-
-            if(resultOfShoot == 1)
+            if(resultOfHumanShoot == 1)
             {
-                enemy_->setResultOfOwnShoot(shootingCoordinates.first, shootingCoordinates.second, true);
+                human_->setResultOfOwnShoot(shootingCoordinates.first, shootingCoordinates.second, true);
+
+
+                if(enemy_->getNumberOfDeadShips() == 10)
+                {
+                    isHumanWin = true;
+
+                    break;
+                }
+
             }
-            else if(resultOfShoot == 0)
+            else if(resultOfHumanShoot == 0)
             {
                 human_->setResultOfOwnShoot(shootingCoordinates.first, shootingCoordinates.second, false);
 
-                break;
+                isHumanStep = false;
             }
-            else if(resultOfShoot == -1)
-            {
-            }
-
-            shootingCoordinates = enemy_->getShootingCoordinates();
-
-            resultOfShoot = human_->setEnemyShoot(shootingCoordinates.first, shootingCoordinates.second);
 
             system ("cls");
         }
 
-        resultOfShoot = -1;
 
-        if(human_->getNumberOfDeadShips() == 10)
+        if(isHumanStep == false)
         {
-            std::cout << "You lose!" << std::endl;
+            showMaps(enemy_);
 
-            break;
+            shootingCoordinates = enemy_->getShootingCoordinates();
+
+            resultOfEnemyShoot = human_->setEnemyShoot(shootingCoordinates.first, shootingCoordinates.second);
+
+            if(resultOfEnemyShoot == 1)
+            {
+                enemy_->setResultOfOwnShoot(shootingCoordinates.first, shootingCoordinates.second, true);
+
+                if(human_->getNumberOfDeadShips() == 10)
+                {
+                    isHumanWin = false;
+
+                    break;
+                }
+            }
+            else if(resultOfEnemyShoot == 0)
+            {
+                enemy_->setResultOfOwnShoot(shootingCoordinates.first, shootingCoordinates.second, false);
+
+                isHumanStep = true;
+            }
+
+            system ("cls");
         }
     }
 
     timeEnd_ = std::clock();
+
+    showResult(isHumanWin);
 
     showStatistics();
 

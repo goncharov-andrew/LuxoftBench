@@ -140,3 +140,35 @@ std::vector<std::pair<int, int>> Navy::getNavyCoordinates()
 
     return navyCoordinates;
 }
+
+void Navy::setShootToPipe(int x, int y)
+{
+    std::vector<OneDeckShip>::iterator oneDeckIter;
+
+    std::vector<TwoDeckShip>::iterator twoDeckIter;
+
+    std::vector<ThreeDeckShip>::iterator threeDeckIter;
+
+    std::vector<FourDeckShip>::iterator fourDeckIter;
+
+
+    for (oneDeckIter = Navy::oneDeckShips_.begin(); oneDeckIter != Navy::oneDeckShips_.end(); ++oneDeckIter)
+    {
+        (*oneDeckIter).setDeadPart(x, y);
+    }
+
+    for (twoDeckIter = Navy::twoDeckShips_.begin(); twoDeckIter != Navy::twoDeckShips_.end(); ++twoDeckIter)
+    {
+        (*twoDeckIter).setDeadPart(x, y);
+    }
+
+    for (threeDeckIter = Navy::threeDeckShips_.begin(); threeDeckIter != Navy::threeDeckShips_.end(); ++threeDeckIter)
+    {
+        (*threeDeckIter).setDeadPart(x, y);
+    }
+
+    for (fourDeckIter = Navy::fourDeckShips_.begin(); fourDeckIter != Navy::fourDeckShips_.end(); ++fourDeckIter)
+    {
+        (*fourDeckIter).setDeadPart(x, y);
+    }
+}

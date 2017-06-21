@@ -30,6 +30,10 @@ private:
 
     void showMaps(Player* player);
 
+    void showMessage(int code);
+
+    void showResult(bool result);
+
     void showStatistics();
 };
 

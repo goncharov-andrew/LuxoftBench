@@ -19,6 +19,11 @@ bool OneDeckShip::getIsAlive()
     return Ship::getIsAlive();
 }
 
+void OneDeckShip::setDeadPart(int x, int y)
+{
+    Ship::setDeadPart(x, y);
+}
+
 bool OneDeckShip::setCoordinates(std::stack<std::pair<int, int> >& coordinates)
 {
     return Ship::setCoordinates(coordinates);

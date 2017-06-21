@@ -19,6 +19,23 @@ bool Ship::getIsAlive()
     return isAlive;
 }
 
+void Ship::setDeadPart(int x, int y)
+{
+    std::vector<PartOfShip>:: iterator i;
+
+    for(i = parts_.begin(); i != parts_.end(); ++i)
+    {
+        std::pair<int, int>coordinates = (*i).getCoordinates();
+
+        if(x == coordinates.first && y == coordinates.second)
+        {
+            (*i).setIsAlive(false);
+
+            break;
+        }
+    }
+}
+
 std::vector<std::pair<int, int> > Ship::getCoordinates()
 {
     std::vector<std::pair<int, int>> coordinates;

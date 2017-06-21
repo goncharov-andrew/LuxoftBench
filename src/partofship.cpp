@@ -22,3 +22,8 @@ bool PartOfShip::getIsAlive()
 {
     return isAlive_;
 }
+
+void PartOfShip::setIsAlive(bool isAlive)
+{
+    isAlive_ = isAlive;
+}

@@ -19,6 +19,8 @@ public:
 
     virtual std::vector<std::pair<int, int> > getCoordinates() = 0;
 
+    virtual void setDeadPart(int x, int y) = 0;
+
 protected:
 
    std::vector<PartOfShip> parts_;

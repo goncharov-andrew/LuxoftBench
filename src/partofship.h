@@ -15,6 +15,8 @@ public:
 
     bool getIsAlive();
 
+    void setIsAlive(bool isAlive);
+
 private:
 
     std::pair<int, int> coordinates_;
