@@ -2,7 +2,9 @@
 #define HUMANCREATOR_H
 
 #include <playercreator.h>
+
 #include <getplayercoordinatesstrategy.h>
+
 #include <navybuilder.h>
 
 class HumanCreator : public PlayerCreator

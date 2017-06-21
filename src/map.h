@@ -6,12 +6,6 @@
 
 class Map
 {
-private:
-
-    MapSymbols* mapsymbols_;
-
-    char** map_;
-
 public:
 
     const int SIZE_OF_MAP = 10;
@@ -25,6 +19,14 @@ public:
     void setEmptyShoot(int x, int y);
 
     const char** getMap();
+
+private:
+
+    MapSymbols* mapsymbols_;
+
+    char** map_;
+
+
 };
 
 #endif // MAP_H

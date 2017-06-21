@@ -8,16 +8,6 @@
 
 class CreateCoordinates
 {
-private:
-
-    std::stack<std::stack<std::pair<int, int>>> oneDeckCoordinates_;
-
-    std::stack<std::stack<std::pair<int, int>>> twoDeckCoordinates_;
-
-    std::stack<std::stack<std::pair<int, int>>> threeDeckCoordinates_;
-
-    std::stack<std::stack<std::pair<int, int>>> fourDeckCoordinates_;
-
 public:
 
     CreateCoordinates();
@@ -29,6 +19,18 @@ public:
     std::stack<std::stack<std::pair<int, int>>> getThreeDeckCoordinates();
 
     std::stack<std::stack<std::pair<int, int>>> getFourDeckCoordinates();
+
+private:
+
+    std::stack<std::stack<std::pair<int, int>>> oneDeckCoordinates_;
+
+    std::stack<std::stack<std::pair<int, int>>> twoDeckCoordinates_;
+
+    std::stack<std::stack<std::pair<int, int>>> threeDeckCoordinates_;
+
+    std::stack<std::stack<std::pair<int, int>>> fourDeckCoordinates_;
+
+
 };
 
 #endif // CREATECOORDINATES_H

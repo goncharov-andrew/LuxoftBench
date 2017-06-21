@@ -6,12 +6,6 @@
 
 class PartOfShip
 {
-private:
-
-    std::pair<int, int> coordinates_;
-
-    bool isAlive_;
-
 public:
     PartOfShip();
 
@@ -20,6 +14,12 @@ public:
     void setCoordinates(std::pair<int, int> coordinates);
 
     bool getIsAlive();
+
+private:
+
+    std::pair<int, int> coordinates_;
+
+    bool isAlive_;
 };
 
 #endif // PARTOFSHIP_H

@@ -2,17 +2,13 @@
 #define SHIP_H
 
 #include <partofship.h>
+
+
 #include <stack>
 #include <vector>
 
 class Ship
 {
-protected:
-
-   std::vector<PartOfShip*> parts_;
-
-   int size_;
-
 public:
 
     virtual ~Ship() = 0;
@@ -22,6 +18,12 @@ public:
     virtual bool setCoordinates(std::stack<std::pair<int, int>> coordinates) = 0;
 
     virtual std::vector<std::pair<int, int>> getCoordinates() = 0;
+
+protected:
+
+   std::vector<PartOfShip*> parts_;
+
+   int size_;
 };
 
 #endif // SHIP_H

@@ -2,7 +2,9 @@
 #define ENEMYCREATOR_H
 
 #include <playercreator.h>
+
 #include <getenemycoordinatesstrategy.h>
+
 #include <navybuilder.h>
 
 class EnemyCreator : public PlayerCreator

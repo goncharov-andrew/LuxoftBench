@@ -2,11 +2,17 @@
 #define GAME_H
 
 #include <playercreator.h>
+
 #include <time.h>
 
 
 class Game
 {
+public:
+    Game();
+
+    void startGame();
+
 private:
 
     clock_t timeBegin_;
@@ -23,10 +29,7 @@ private:
 
     void showStatistics();
 
-public:
-    Game();
 
-    void startGame();
 };
 
 #endif // GAME_H

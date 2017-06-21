@@ -1,23 +1,17 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <map.h>
-#include <navy.h>
 #include <iostream>
+
+
+#include <map.h>
+
+#include <navy.h>
+
 #include <getcoordinatestrategy.h>
 
 class Player
 {
-private:
-
-    Map* enemyMap_;
-
-    Map* playerMap_;
-
-    Navy* navy_;
-
-    GetCoordinatesStrategy* getCoordinatesStrategy_;
-
 public:
     Player(Map* playerMap, Map* enemyMap, Navy* navy, GetCoordinatesStrategy* getCoordinatesStrategy);
 
@@ -34,6 +28,16 @@ public:
     Map* getPlayerMap();
 
     std::pair<int, int> getSootingCoordinates();
+
+private:
+
+    Map* enemyMap_;
+
+    Map* playerMap_;
+
+    Navy* navy_;
+
+    GetCoordinatesStrategy* getCoordinatesStrategy_;
 };
 
 #endif // PLAYER_H

@@ -10,6 +10,16 @@
 
 class Navy
 {
+public:
+    Navy(std::vector<OneDeckShip*> oneDeckShips,
+         std::vector<TwoDeckShip*> twoDeckShips,
+         std::vector<ThreeDeckShip*> threeDeckShips,
+         std::vector<FourDeckShip*> fourDeckShips);
+
+    void setShootToPipe(int x, int y);
+
+    std::vector<std::pair<int, int> > getNavyCoordinates();
+
 private:
 
     std::vector<OneDeckShip*> oneDeckShips_;
@@ -20,15 +30,7 @@ private:
 
     std::vector<FourDeckShip*> fourDeckShips_;
 
-public:
-    Navy(std::vector<OneDeckShip*> oneDeckShips,
-         std::vector<TwoDeckShip*> twoDeckShips,
-         std::vector<ThreeDeckShip*> threeDeckShips,
-         std::vector<FourDeckShip*> fourDeckShips);
 
-    void setShootToPipe(int x, int y);
-
-    std::vector<std::pair<int, int> > getNavyCoordinates();
 
 };
 

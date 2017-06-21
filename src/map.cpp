@@ -52,8 +52,11 @@ Map::Map(Navy *navy)
         currentString = (*navyCoordIter).first;
         currentColumn = (*navyCoordIter).second;
 
-        if(currentString >= 0 && currentString <= 9 &&
-           currentColumn >= 0 && currentColumn <= 9)
+        bool isRightStringCoordinate = currentString >= 0 && currentString <= 9;
+
+        bool isRightColumnCoordinate = currentColumn >= 0 && currentColumn <= 9;
+
+        if(isRightStringCoordinate && isRightColumnCoordinate)
         {
             map_[currentString][currentColumn] = mapsymbols_->PIPE;
         }

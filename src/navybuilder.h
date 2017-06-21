@@ -6,6 +6,12 @@
 
 class NavyBuilder
 {
+public:
+
+    NavyBuilder();
+
+    Navy* buildNavy();
+
 private:
 
     std::vector<OneDeckShip*> buildOneDeckShips();
@@ -17,12 +23,6 @@ private:
     std::vector<FourDeckShip*> buildFourDeckShips();
 
     CreateCoordinates* createCoordinates;
-
-public:
-
-    NavyBuilder();
-
-    Navy* buildNavy();
 };
 
 #endif // NAVYBUILDER_H
