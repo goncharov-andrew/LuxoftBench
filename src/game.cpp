@@ -142,8 +142,6 @@ void Game::startGame()
 
         if(isHumanStep == false)
         {
-            //showMaps(enemy_);
-
             shootingCoordinates = enemy_->getShootingCoordinates();
 
             resultOfEnemyShoot = human_->setEnemyShoot(shootingCoordinates.first, shootingCoordinates.second);
@@ -172,7 +170,15 @@ void Game::startGame()
 
     timeEnd_ = std::clock();
 
+    std::cout << std::endl;
+
     showResult(isHumanWin);
+
+    std:: cout << "Enemy field:" << std::endl << std::endl;
+
+    showMaps(enemy_);
+
+    std::cout << std::endl;
 
     showStatistics();
 
