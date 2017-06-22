@@ -2,13 +2,17 @@
 
 Game::Game()
 {
-    PlayerCreator* humanPlayerCreator = new HumanCreator();
+    playerCreator_ = new EnemyCreator();
 
-    PlayerCreator* enemyPlayerCreator = new EnemyCreator();
+    enemy_ = playerCreator_->createPlayer();
 
-    enemy_ = enemyPlayerCreator->createPlayer();
+    delete playerCreator_;
 
-    human_ = humanPlayerCreator->createPlayer();
+    playerCreator_ = new  HumanCreator();
+
+    human_ = playerCreator_->createPlayer();
+
+    delete playerCreator_;
 }
 
 void Game::showMaps(Player* player)
