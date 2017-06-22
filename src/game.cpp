@@ -138,7 +138,7 @@ void Game::startGame()
 
         if(isHumanStep == false)
         {
-            showMaps(enemy_);
+            //showMaps(enemy_);
 
             shootingCoordinates = enemy_->getShootingCoordinates();
 

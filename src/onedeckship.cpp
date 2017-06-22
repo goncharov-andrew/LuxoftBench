@@ -29,7 +29,7 @@ bool OneDeckShip::setCoordinates(std::stack<std::pair<int, int> >& coordinates)
     return Ship::setCoordinates(coordinates);
 }
 
-std::vector<std::pair<int, int> > OneDeckShip::getCoordinates()
+const std::vector<std::pair<int, int> >& OneDeckShip::getCoordinates()
 {
     return Ship::getCoordinates();
 }

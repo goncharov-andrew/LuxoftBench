@@ -1,5 +1,3 @@
-#include <QCoreApplication>
-
 #include <humancreator.h>
 #include <enemycreator.h>
 
@@ -7,11 +5,9 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-
     Game game;
 
     game.startGame();
 
-    return a.exec();
+    return 0;
 }

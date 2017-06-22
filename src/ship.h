@@ -17,13 +17,15 @@ public:
 
     virtual bool setCoordinates(std::stack<std::pair<int, int> > &coordinates) = 0;
 
-    virtual std::vector<std::pair<int, int> > getCoordinates() = 0;
+    virtual const std::vector<std::pair<int, int> >& getCoordinates() = 0;
 
     virtual void setDeadPart(int x, int y) = 0;
 
 protected:
 
    std::vector<PartOfShip> parts_;
+
+   std::vector<std::pair<int, int>> coordinates_;
 
    int size_;
 };

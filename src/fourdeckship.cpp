@@ -32,7 +32,7 @@ bool FourDeckShip::setCoordinates(std::stack<std::pair<int, int> >& coordinates)
     return Ship::setCoordinates(coordinates);
 }
 
-std::vector<std::pair<int, int> > FourDeckShip::getCoordinates()
+const std::vector<std::pair<int, int> >& FourDeckShip::getCoordinates()
 {
     return Ship::getCoordinates();
 }

@@ -36,18 +36,9 @@ void Ship::setDeadPart(int x, int y)
     }
 }
 
-std::vector<std::pair<int, int> > Ship::getCoordinates()
+const std::vector<std::pair<int, int> > &Ship::getCoordinates()
 {
-    std::vector<std::pair<int, int>> coordinates;
-
-    std::vector<PartOfShip>:: iterator i;
-
-    for(i = parts_.begin(); i != parts_.end(); ++i)
-    {
-        coordinates.push_back((*i).getCoordinates());
-    }
-
-    return coordinates;
+    return coordinates_;
 }
 
 bool Ship::setCoordinates(std::stack<std::pair<int, int> >& coordinates)
@@ -58,11 +49,15 @@ bool Ship::setCoordinates(std::stack<std::pair<int, int> >& coordinates)
     }
     else
     {
+        coordinates_.clear();
+
         std::vector<PartOfShip>:: iterator i;
 
         for(i = parts_.begin(); i != parts_.end(); ++i)
         {
             (*i).setCoordinates(coordinates.top());
+
+            coordinates_.push_back(coordinates.top());
 
             coordinates.pop();
         }

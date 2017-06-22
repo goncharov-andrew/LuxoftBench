@@ -18,7 +18,7 @@ public:
 
     void setDeadPart(int x, int y);
 
-    std::vector<std::pair<int, int>> getCoordinates();
+    const std::vector<std::pair<int, int>>& getCoordinates();
 };
 
 #endif // ONEDECKSHIP_H

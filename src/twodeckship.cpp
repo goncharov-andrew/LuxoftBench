@@ -31,7 +31,7 @@ bool TwoDeckShip::setCoordinates(std::stack<std::pair<int, int> >& coordinates)
     return Ship::setCoordinates(coordinates);
 }
 
-std::vector<std::pair<int, int> > TwoDeckShip::getCoordinates()
+const std::vector<std::pair<int, int> >& TwoDeckShip::getCoordinates()
 {
     return Ship::getCoordinates();
 }
