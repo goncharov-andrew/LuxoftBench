@@ -1,7 +1,7 @@
 #ifndef GETPLAYERCOORDINATESSTRATEGY_H
 #define GETPLAYERCOORDINATESSTRATEGY_H
 
-#include <getcoordinatestrategy.h>
+#include "getcoordinatestrategy.h"
 
 class GetPlayerCoordinatesStrategy : public GetCoordinatesStrategy
 {

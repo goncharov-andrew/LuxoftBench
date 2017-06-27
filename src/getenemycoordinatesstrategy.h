@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 
-#include <getcoordinatestrategy.h>
+#include "getcoordinatestrategy.h"
 
 class GetEnemyCoordinatesStrategy : public GetCoordinatesStrategy
 {

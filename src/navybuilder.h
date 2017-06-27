@@ -1,8 +1,8 @@
 #ifndef NAVYBUILDER_H
 #define NAVYBUILDER_H
 
-#include <navy.h>
-#include <createcoordinates.h>
+#include "navy.h"
+#include "createcoordinates.h"
 
 class NavyBuilder
 {

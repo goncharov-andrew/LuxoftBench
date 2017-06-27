@@ -1,7 +1,7 @@
 #ifndef TWODECKSHIP_H
 #define TWODECKSHIP_H
 
-#include <constants.h>
+#include "constants.h"
 
 #include "ship.h"
 

@@ -1,10 +1,10 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include <mapsymbols.h>
-#include <navy.h>
+#include "mapsymbols.h"
+#include "navy.h"
 
-#include <constants.h>
+#include "constants.h"
 
 class Map
 {

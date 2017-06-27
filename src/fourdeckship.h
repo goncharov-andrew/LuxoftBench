@@ -1,9 +1,9 @@
 #ifndef FOURDECKSHIP_H
 #define FOURDECKSHIP_H
 
-#include <constants.h>
+#include "constants.h"
 
-#include <ship.h>
+#include "ship.h"
 
 class FourDeckShip : public Ship
 {

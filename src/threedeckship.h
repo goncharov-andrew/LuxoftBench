@@ -1,7 +1,7 @@
 #ifndef THREEDECKSHIP_H
 #define THREEDECKSHIP_H
 
-#include <constants.h>
+#include "constants.h"
 
 #include "ship.h"
 

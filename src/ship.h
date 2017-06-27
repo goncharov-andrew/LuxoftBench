@@ -1,7 +1,7 @@
 #ifndef SHIP_H
 #define SHIP_H
 
-#include <partofship.h>
+#include "partofship.h"
 
 
 #include <stack>

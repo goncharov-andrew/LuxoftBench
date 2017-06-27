@@ -4,11 +4,11 @@
 #include <iostream>
 
 
-#include <map.h>
+#include "map.h"
 
-#include <navy.h>
+#include "navy.h"
 
-#include <getcoordinatestrategy.h>
+#include "getcoordinatestrategy.h"
 
 class Player
 {

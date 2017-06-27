@@ -6,7 +6,7 @@
 class GetCoordinatesStrategy
 {
 public:
-    virtual ~GetCoordinatesStrategy(){}
+	virtual ~GetCoordinatesStrategy();
 
     virtual std::pair<int, int> GetCoordinates() = 0;
 };

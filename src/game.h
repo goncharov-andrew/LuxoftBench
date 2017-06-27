@@ -1,9 +1,9 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <playercreator.h>
-#include <humancreator.h>
-#include <enemycreator.h>
+#include "playercreator.h"
+#include "humancreator.h"
+#include "enemycreator.h"
 
 #include <time.h>
 #include <iostream>

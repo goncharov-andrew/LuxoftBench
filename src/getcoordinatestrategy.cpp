@@ -1,6 +1,6 @@
 #include "getcoordinatestrategy.h"
 
-GetCoordinateStrategy::GetCoordinateStrategy()
+GetCoordinatesStrategy::~GetCoordinatesStrategy()
 {
 
 }

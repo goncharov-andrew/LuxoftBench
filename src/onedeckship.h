@@ -1,9 +1,9 @@
 #ifndef ONEDECKSHIP_H
 #define ONEDECKSHIP_H
 
-#include <constants.h>
+#include "constants.h"
 
-#include <ship.h>
+#include "ship.h"
 
 class OneDeckShip : public Ship
 {
